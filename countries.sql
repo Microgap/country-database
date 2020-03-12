@@ -1,3 +1,28 @@
+CREATE TABLE "countries" (
+  "country_code" varchar(255),
+  "short_code" varchar(255),
+  "short_name" varchar(255),
+  "full_name" varchar(255),
+  "english_name" varchar(255),
+  "longitude" real DEFAULT 0.0,
+  "latitude" real DEFAULT 0.0,
+  "altitude" real,
+  "area" real,
+  "time_zone" varchar(255) DEFAULT 'UTC+08:00',
+  "postcode" varchar(255),
+  "area_code" varchar(255),
+  "comment" varchar(255),
+  "iso3166" varchar(255),
+  "created_at" datetime DEFAULT CURRENT_TIMESTAMP,
+  "updated_at" datetime,
+  "country_code3Char" varchar(255),
+  "mobile_format" varchar(255) DEFAULT '####-####-###',
+  "landline_format" varchar(255) DEFAULT '(####)####-####',
+  "bak" TEXT,
+  PRIMARY KEY ("country_code"),
+  UNIQUE ("country_code3Char" ASC)
+);
+
 INSERT INTO "countries"("country_code", "short_code", "short_name", "full_name", "english_name", "longitude", "latitude", "altitude", "area", "time_zone", "postcode", "area_code", "comment", "iso3166", "created_at", "updated_at", "country_code3Char", "mobile_format", "landline_format", "bak") VALUES ('020', 'AD', '安道尔', '安道尔', 'Andorra', 0.0, 0.0, NULL, NULL, 'UTC-08:00', NULL, '376', NULL, 'ISO 3166-2:AD', '2020-03-11 10:29:41', NULL, 'AND', '####-####-###', '(####)####-####', NULL);
 INSERT INTO "countries"("country_code", "short_code", "short_name", "full_name", "english_name", "longitude", "latitude", "altitude", "area", "time_zone", "postcode", "area_code", "comment", "iso3166", "created_at", "updated_at", "country_code3Char", "mobile_format", "landline_format", "bak") VALUES ('784', 'AE', '阿联酋', '阿联酋', 'United Arab Emirates', 0.0, 0.0, NULL, NULL, 'UTC+04:00', NULL, '971', NULL, 'ISO 3166-2:AE', '2020-03-11 10:29:41', NULL, 'ARE', '####-####-###', '(####)####-####', NULL);
 INSERT INTO "countries"("country_code", "short_code", "short_name", "full_name", "english_name", "longitude", "latitude", "altitude", "area", "time_zone", "postcode", "area_code", "comment", "iso3166", "created_at", "updated_at", "country_code3Char", "mobile_format", "landline_format", "bak") VALUES ('004', 'AF', '阿富汗', '阿富汗', 'Afghanistan', 0.0, 0.0, NULL, NULL, 'UTC-03:30', NULL, '93', NULL, 'ISO 3166-2:AF', '2020-03-11 10:29:41', NULL, 'AFG', '####-####-###', '(####)####-####', NULL);
